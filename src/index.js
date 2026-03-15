@@ -9,10 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin: "http://www.growdev.com.br",
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
-}));
+app.use(cors());
 
 app.use(logMiddleware);
 
